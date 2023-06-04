@@ -115,7 +115,7 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/php.ini
 # RUN echo 'opcache.jit=1255' >> /usr/local/etc/php/php.ini
 
 ##Install Symfony Cli
-RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | -E bash
 RUN  apt install symfony-cli
 
 #Clean
