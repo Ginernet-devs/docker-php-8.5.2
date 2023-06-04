@@ -38,7 +38,7 @@ ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://ginernet_php82:9000/var/www/html/public
 ```
 
 ## :mag_right: Change log
-Please see <a href="">CHANGELOG</a> for more information what has changed recently.
+Please see <a href="https://github.com/Ginernet-devs/docker-php-8.5.2/blob/main/changelog.md">CHANGELOG</a> for more information what has changed recently.
 
 
 
