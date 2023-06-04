@@ -47,6 +47,6 @@ Feel free to make as many pull requests as you think fit, because there are so m
 
 Here is a guide if you want to take a look()
 
-If you find a bug, let us know <a href="">here</a> .
+If you find a bug, let us know <a href="https://github.com/Ginernet-devs/docker-php-8.5.2/issues">here</a> .
 
-If you request a new  <a href =""> feature</a>.
+If you request a new  <a href ="https://github.com/Ginernet-devs/docker-php-8.5.2/issues"> feature</a>.
