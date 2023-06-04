@@ -3,11 +3,11 @@ ARG TIMEZONE
 
 LABEL Maintainer="email@javier-rodriguez.com"
 
-#Configuración básica
+#Configuration
 ENV ACCEPT_EULA=Y
 ARG DEBIAN_FRONTEND=noninteractive
 
-#Utilidades
+#Utilities
 RUN apt-get update && apt-get install -y \
     git \
     openssl \
@@ -31,7 +31,7 @@ RUN apt-get install -y \
 RUN wget -O phpunit.phar https://phar.phpunit.de/phpunit-8.0.6.phar && \
     chmod +x phpunit.phar &&  cp phpunit.phar /usr/local/lib/php
 
-#Instalación Composer
+#Install Composer.
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
 
@@ -114,7 +114,11 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/php.ini
 # RUN echo 'opcache.jit_buffer_size=100M' >> /usr/local/etc/php/php.ini
 # RUN echo 'opcache.jit=1255' >> /usr/local/etc/php/php.ini
 
-#Limpieza
+##Install Symfony Cli
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+RUN  apt install symfony-cli
+
+#Clean
 RUN rm -rf /var/lib/apt/lists/*
 
 
