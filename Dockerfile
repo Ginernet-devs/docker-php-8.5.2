@@ -1,4 +1,4 @@
-FROM php:8.5.2-fpm as ginernet-php-fpm85
+FROM php:8.5-fpm as ginernet-php-fpm85
 ARG TIMEZONE
 
 LABEL Maintainer="email@javier-rodriguez.com"
