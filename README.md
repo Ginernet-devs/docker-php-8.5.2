@@ -45,7 +45,7 @@ Please see <a href="https://github.com/Ginernet-devs/docker-php-8.5.2/blob/main/
 ## :superhero_woman: Contribute.
 Feel free to make as many pull requests as you think fit, because there are so many things to do, all help is welcome.
 
-Here is a guide if you want to take a look()
+Here is a guide if you want to take a look(https://github.com/Ginernet-devs/ginernet/blob/main/README.md)
 
 If you find a bug, let us know <a href="https://github.com/Ginernet-devs/docker-php-8.5.2/issues">here</a> .
 
