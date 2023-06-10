@@ -115,11 +115,12 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/php.ini
 # RUN echo 'opcache.jit=1255' >> /usr/local/etc/php/php.ini
 
 ##Install Symfony Cli
-RUN curl -sS https://get.symfony.com/cli/installer | bash
+RUN wget https://get.symfony.com/cli/installer -O - | bash
+RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 #Clean
 RUN rm -rf /var/lib/apt/lists/*
-
+RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 COPY nginx-site.conf /etc/nginx/sites-enabled/default
 COPY entrypoint.sh /etc/entrypoint.sh
