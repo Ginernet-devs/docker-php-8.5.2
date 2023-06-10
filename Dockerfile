@@ -120,7 +120,6 @@ RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 #Clean
 RUN rm -rf /var/lib/apt/lists/*
-RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 COPY nginx-site.conf /etc/nginx/sites-enabled/default
 COPY entrypoint.sh /etc/entrypoint.sh
