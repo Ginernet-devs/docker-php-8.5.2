@@ -77,16 +77,6 @@ RUN apt-get update; \
     pecl install imagick; \
     docker-php-ext-enable imagick;
 
-
-
-#RUN apt-get update && apt-get install -y \
-#    libmagickwand-dev --no-install-recommends
-
-##RUN pecl install imagick && docker-php-ext-enable imagick
-# RUN mkdir -p /usr/src/php/ext/imagick; \
-#    curl -fsSL https://github.com/Imagick/imagick/archive/06116aa24b76edaf6b1693198f79e6c295eda8a9.tar.gz | tar xvz -C "/usr/src/php/ext/imagick" --strip 1; \ 
-#    docker-php-ext-install imagick;
-
 ##MSQL
 # RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
 #     && curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list \
