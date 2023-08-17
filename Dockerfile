@@ -59,11 +59,12 @@ RUN pecl install xmlrpc-1.0.0RC3
 RUN docker-php-ext-install xmlwriter
 RUN docker-php-ext-install xml
 RUN docker-php-ext-install opcache
-RUN docker-php-ext-install curl
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install soap
 RUN apt-get install -y libonig-dev
 RUN docker-php-ext-install mbstring
+RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
+      http
 
 RUN apt-get update -y && apt-get install -y libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev \
     libfreetype6-dev zlib1g-dev libzip-dev
