@@ -11,3 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed.
 
 ### Removed.
+
+## 2023-08-18
+### Added.
+- Added php extesión http.
+
+### Changed.
+
+### Removed.
