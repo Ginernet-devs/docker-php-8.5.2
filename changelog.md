@@ -19,3 +19,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed.
 
 ### Removed.
+
+## 2023-08-28
+### Added.
+
+
+### Changed.
+- Modify php.ini to incremente timeout
+
+### Removed.

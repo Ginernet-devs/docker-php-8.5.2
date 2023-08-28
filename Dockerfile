@@ -106,6 +106,9 @@ RUN echo 'display_errors = Off' >> /usr/local/etc/php/php.ini
 RUN echo 'error_reporting = E_ERROR' >> /usr/local/etc/php/php.ini
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/php.ini
 
+##MODIFY TIME OUT
+RUN echo 'max_execution_time = 600' >> /usr/local/etc/php/php.ini
+
 ##JIT en PHP8
 # RUN echo 'opcache.enable=1' >> /usr/local/etc/php/php.ini
 # RUN echo 'opcache.enable_cli=1' >> /usr/local/etc/php/php.ini
