@@ -18,7 +18,7 @@ Docker file for use in PHP Symfony support for php 8.2.
 - Drupal.
 - etc.
 
-
+[![Anchore Grype vulnerability scan](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml/badge.svg)](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml)
 
 
 ## 🚀 Installation
