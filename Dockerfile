@@ -94,7 +94,7 @@ RUN apt-get update; \
 
 ##Install apmq
 RUN pecl install amqp \
-docker-php-ext-enable amqp
+&& docker-php-ext-enable amqp
 
 ##Configuración XDEBug
 RUN pecl install xdebug
