@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     vim \
     lsof \
-    apt-utils
+    apt-utils \
+    librabbitmq-dev  
 
 RUN apt-get install -y \
     zlib1g-dev libpq-dev libc-client-dev libkrb5-dev gnutls-bin
@@ -39,6 +40,8 @@ RUN composer --version
 ENV TZ=America/Los_Angeles
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN echo '[PHP]\ndate.timezone ="Europe/Madrid"' > /usr/local/etc/php/php.ini
+
+
 
 #PHP Extensions
 RUN apt-get install -y libxml2-dev libmcrypt-dev libcurl4-openssl-dev
@@ -89,6 +92,10 @@ RUN apt-get update; \
 #     && echo "extension=sqlsrv.so" >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-sqlsrv.ini \
 #     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
+##Install apmq
+RUN pecl install amqp \
+docker-php-ext-enable amqp
+
 ##Configuración XDEBug
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
@@ -122,10 +129,10 @@ RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 #Clean
 RUN rm -rf /var/lib/apt/lists/*
 
+
 COPY nginx-site.conf /etc/nginx/sites-enabled/default
 COPY entrypoint.sh /etc/entrypoint.sh
 RUN chmod +x /etc/entrypoint.sh
-
 
 WORKDIR /var/www
 
