@@ -8,7 +8,8 @@
 </p>
 
 
-![Packagist PHP Version Support](https://img.shields.io/badge/php-%5E8.2-blue)
+![Packagist PHP Version Support](https://img.shields.io/badge/php-%5E8.2-blue) [![Anchore Grype vulnerability scan](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml/badge.svg)](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml)
+
 
 
 Docker file for use in PHP Symfony support for php 8.2.
@@ -18,7 +19,6 @@ Docker file for use in PHP Symfony support for php 8.2.
 - Drupal.
 - etc.
 
-[![Anchore Grype vulnerability scan](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml/badge.svg)](https://github.com/Ginernet-devs/docker-php-8.5.2/actions/workflows/anchore.yml)
 
 
 ## 🚀 Installation
