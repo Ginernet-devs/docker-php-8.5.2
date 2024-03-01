@@ -28,3 +28,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Modify php.ini to incremente timeout
 
 ### Removed.
+
+## 2024-03-01
+### Added.
+- Added AMQP Support for RabbitMQ
+
+### Changed.
+
+
+### Removed.
